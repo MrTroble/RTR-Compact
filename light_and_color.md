@@ -12,4 +12,4 @@ Introduction of ***solid angles*** steradians measured in steradians.
 | irradiance        | E      | $W / m^2$ | density of radiant flux per area         | $\dfrac{d\Phi}{dA}$ |
 | radiant intensity | I      | W/sr      |
 
-[Back](README.md)
+[Back](./)
