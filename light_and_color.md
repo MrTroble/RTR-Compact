@@ -4,12 +4,13 @@ This is currently a run down of ***Realtime Rendering 4th Edition*** Chapter 8 *
 
 ## Radiometry
 
-Introduction of ***solid angles*** steradians measured in steradians.
+| Name              | Symbol   | Units           | Explanation                                     | Equation                          |
+| ----------------- | -------- | --------------- | ----------------------------------------------- | --------------------------------- |
+| solid angle       | $\omega$ | steradians (sr) | surface area of a $\dfrac{1}{4\pi}$ unit sphere | $\omega = \dfrac{A_{patch}}{r^2}$ |
+| radiant flux      | $\Phi$   | watt (W)        | power -> flow of radiant energy per time        | measured?                         |
+| irradiance        | E        | $W / m^2$       | density of radiant flux per area                | $\dfrac{d\Phi}{dA}$               |
+| radiant intensity | I        | W/sr            | density of radiant flux per steradian           | $\dfrac{d\Phi}{d\omega}$          |
 
-| Name              | Symbol | Units     | Explanation                              | Equation            |
-| ----------------- | ------ | --------- | ---------------------------------------- | ------------------- |
-| radiant flux      | $\Phi$ | watt (W)  | power -> flow of radiant energy per time | measured?           |
-| irradiance        | E      | $W / m^2$ | density of radiant flux per area         | $\dfrac{d\Phi}{dA}$ |
-| radiant intensity | I      | W/sr      |
+Solid angle further reading: [https://mathworld.wolfram.com/SolidAngle.html](https://mathworld.wolfram.com/SolidAngle.html)
 
 [Back](./)
