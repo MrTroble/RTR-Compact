@@ -37,4 +37,26 @@ The primary difference between radiometric and photometric quantities is that th
 | radiant intensity: W/sr   | luminous intensity: candela (cd) |
 | radiance: W/(m^2 sr)      | luminance: cd/m^2 = nit          |
 
+## Colorimetry
+
+Humans have 3 receptors to get information about color and can see 10 million colors hence 3 values can be used to describe every stimulus to the eye. Standardization for measuring color was proposed by the [CIE](http://cie.co.at/) therefore ***color-matching functions*** where introduced. Those color matching functions represent the area under color matching curve such as the following.
+
+![color matching curve](pictures/CIE_1931_XYZ_Color_Matching_Functions.svg)
+
+[Source](https://commons.wikimedia.org/wiki/File:CIE_1931_XYZ_Color_Matching_Functions.svg)
+
+Therefore the following calculations arise:
+
+$X = \int_{380}^{780} s(\lambda) x(\lambda) d\lambda$
+
+$Y = \int_{380}^{780} s(\lambda) y(\lambda) d\lambda$
+
+$Z = \int_{380}^{780} s(\lambda) z(\lambda) d\lambda$
+
+$s(\lambda)$ denotes the SPD function
+
+$x(\lambda);y(\lambda);z(\lambda)$ denote the color matching functions.
+
+$X; Y; Z$ denote the color values in the CIE XYZ color space
+
 [Back](./)
