@@ -53,10 +53,20 @@ $Y = \int_{380}^{780} s(\lambda) y(\lambda) d\lambda$
 
 $Z = \int_{380}^{780} s(\lambda) z(\lambda) d\lambda$
 
-$s(\lambda)$ denotes the SPD function
+$s(\lambda)$ denotes the SPD function.
 
 $x(\lambda);y(\lambda);z(\lambda)$ denote the color matching functions.
 
-$X; Y; Z$ denote the color values in the CIE XYZ color space
+$X; Y; Z$ denote the color values in the CIE XYZ color space.
+
+### Chromaticity and luminance
+
+Chromaticity describes the character auf the color while luminance describes the brightness of a specific color. This has been mapped on a 2D plane defined by X + Y + Z = 1.
+
+![Chromatic diagram](pictures/XWFpG.png)
+
+[Source](https://i.stack.imgur.com/XWFpG.png)
+
+We now can reduce the chromaticity to x and y on this plane in order to describe the color independent of its luminosity
 
 [Back](./)
