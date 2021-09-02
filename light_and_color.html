@@ -38,7 +38,7 @@
     <body class="vscode-body">
         <h1 id="light-and-color">Light and Color</h1>
 <p>This is currently a run down of <em><strong>Realtime Rendering 4th Edition</strong></em> Chapter 8 <em><strong>Light and Color</strong></em>. It will be expanded upon with various other resource when time comes.</p>
-<h2 id="radiometry">Radiometry</h2>
+<h2 id="radiometry-and-photometry">Radiometry and Photometry</h2>
 <table>
 <thead>
 <tr>
@@ -90,6 +90,8 @@
 <p>Solid angle further reading: <a href="https://mathworld.wolfram.com/SolidAngle.html">https://mathworld.wolfram.com/SolidAngle.html</a></p>
 <p><em><strong>Radiance</strong></em> is what is to measured by sensors such as cameras. The value of L along the given ray is equivalent to the shaded surface color at the given surface point. Therefore a <em><strong>radiance distribution</strong></em> function can be defined as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L_i(x, d)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span> where <strong>x</strong> is the 3D position and <strong>d</strong> is the direction (Which is 2D for some reason? TODO: Look into this.). <em><strong>Radiance</strong></em> is not effected by distance, environmental effects (I think this is intuitive? In case check the equation).</p>
 <h3 id="spectral-power-distributions-spds">Spectral power distributions (SPDs)</h3>
+<p>SPDs are used to visualize the lights's energy of mixed wavelength and break it down into the according wavelengths. Every radiometric quantity can be broken down into different wavelengths and can hence be visualized by a SPD. However in rendering practice SPDs are not used because of performance and practicality. See section for Colorimetry.</p>
+<p>Further reading SPDs <a href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/spectral-power-distribution">https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/spectral-power-distribution</a> and <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/vision/spd.html">http://hyperphysics.phy-astr.gsu.edu/hbase/vision/spd.html</a></p>
 <p><a href="./">Back</a></p>
 
     </body>

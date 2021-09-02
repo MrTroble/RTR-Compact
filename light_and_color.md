@@ -2,7 +2,7 @@
 
 This is currently a run down of ***Realtime Rendering 4th Edition*** Chapter 8 ***Light and Color***. It will be expanded upon with various other resource when time comes.
 
-## Radiometry
+## Radiometry and Photometry
 
 | Name              | Symbol   | Units           | Explanation                                          | Equation                          |
 | ----------------- | -------- | --------------- | ---------------------------------------------------- | --------------------------------- |
@@ -17,5 +17,9 @@ Solid angle further reading: [https://mathworld.wolfram.com/SolidAngle.html](htt
 ***Radiance*** is what is to measured by sensors such as cameras. The value of L along the given ray is equivalent to the shaded surface color at the given surface point. Therefore a ***radiance distribution*** function can be defined as $L_i(x, d)$ where **x** is the 3D position and **d** is the direction (Which is 2D for some reason? TODO: Look into this.). ***Radiance*** is not effected by distance, environmental effects (I think this is intuitive? In case check the equation).
 
 ### Spectral power distributions (SPDs)
+
+SPDs are used to visualize the lights's energy of mixed wavelength and break it down into the according wavelengths. Every radiometric quantity can be broken down into different wavelengths and can hence be visualized by a SPD. However in rendering practice SPDs are not used because of performance and practicality. See section for Colorimetry.
+
+Further reading SPDs [https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/spectral-power-distribution](https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/spectral-power-distribution) and [http://hyperphysics.phy-astr.gsu.edu/hbase/vision/spd.html](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/spd.html)
 
 [Back](./)
