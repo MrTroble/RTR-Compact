@@ -22,4 +22,19 @@ SPDs are used to visualize the lights's energy of mixed wavelength and break it 
 
 Further reading SPDs [https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/spectral-power-distribution](https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/spectral-power-distribution) and [http://hyperphysics.phy-astr.gsu.edu/hbase/vision/spd.html](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/spd.html)
 
+### Photometric Curve
+
+![Curve](pictures/CIE-photometric-curve.png)
+
+[Source](https://www.researchgate.net/figure/CIE-photometric-curve_fig1_2711215)
+
+The primary difference between radiometric and photometric quantities is that the photometric quantities are just the radiometric quantities but multiplied by the above curve.
+
+| Radiometric               | Photometric                      |
+| ------------------------- | -------------------------------- |
+| radiant flux: watt (Watt) | luminous flux: lumen (lm)        |
+| irradiance: W/m^2         | illuminance: lux (lx)            |
+| radiant intensity: W/sr   | luminous intensity: candela (cd) |
+| radiance: W/(m^2 sr)      | luminance: cd/m^2 = nit          |
+
 [Back](./)
