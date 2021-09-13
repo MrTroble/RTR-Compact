@@ -42,7 +42,7 @@
 <h2 id="model-matrix">Model matrix</h2>
 <p>The model matrix defines the transforms of the givin model within it's world space. This usually can be calculated with a TSR or TSRS multiplication. Starting mit the translation (T) matrix following the scale (S)matrix ending with the rotation (R) matrix. Additionally an other post rotation scale can be added in order to scale after the rotation was applied.</p>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi>l</mi><mo>=</mo><mi>t</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>s</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>⋅</mo><mi>s</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>e</mi><mo>⋅</mo><mi>r</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo stretchy="false">(</mo><mo>⋅</mo><mtext>second-scale</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">model = translation \cdot scale \cdot rotation (\cdot \text{second-scale})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">an</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">sc</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ro</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord">⋅</span><span class="mord text"><span class="mord">second-scale</span></span><span class="mclose">)</span></span></span></span></p>
-<p>Depending if the matrices are column or row based one might need to use the inverse of what is shown here. The following are row based</p>
+<p>Depending if the matrices are column or row based one might need to use the inverse of what is shown here. The following examples are row based matrices.</p>
 <p>translation = {</p>
 <pre><code class="language-text"><div>    1, 0, 0, x
     0, 1, 0, y
@@ -50,6 +50,89 @@
     0, 0, 0, 1
 </div></code></pre>
 <p>}</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDL2/GLM</td>
+<td><code>glm::translation(vec3 pos)</code></td>
+</tr>
+<tr>
+<td>OGL 3</td>
+<td><code>glTranslated(x, y, z)</code></td>
+</tr>
+</tbody>
+</table>
+<p>scale = {</p>
+<pre><code class="language-text"><div>    x, 0, 0, 0
+    0, y, 0, 0
+    0, 0, z, 0
+    0, 0, 0, 1
+</div></code></pre>
+<p>}</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDL2/GLM</td>
+<td><code>glm::scale(vec3 pos)</code></td>
+</tr>
+<tr>
+<td>OGL 3</td>
+<td><code>glScaled(x, y, z)</code></td>
+</tr>
+</tbody>
+</table>
+<p>rotation_x = {</p>
+<pre><code class="language-text"><div>    1,      0,       0, 0
+    0, cos(x), -sin(x), 0
+    0, sin(x), cos(y), 0
+    0,       0,      0, 1
+</div></code></pre>
+<p>}</p>
+<p>rotation_y = {</p>
+<pre><code class="language-text"><div>    cos(a),  0,  sin(a), 0
+    0,       1,       0, 0
+    -sin(a), 0,  cos(a), 0
+    0,       0,       0, 1
+</div></code></pre>
+<p>}</p>
+<p>rotation_z = {</p>
+<pre><code class="language-text"><div>    cos(a), -sin(a), 0, 0
+    sin(a),  cos(a), 0, 0
+         0,       0, 1, 0
+         0,       0, 0, 1
+</div></code></pre>
+<p>}</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDL2/GLM</td>
+<td><code>glm::rotate(angle, vec3 offset)</code></td>
+</tr>
+<tr>
+<td>OGL 3</td>
+<td><code>glRotated(angle, x, y, z)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="quaternion-representation">Quaternion representation</h3>
 <p><a href="./">Back</a></p>
 
     </body>

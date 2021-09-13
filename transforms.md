@@ -28,4 +28,62 @@ translation = {
 | SDL2/GLM | `glm::translation(vec3 pos)` |
 | OGL 3    | `glTranslated(x, y, z)`      |
 
+scale = {
+
+```text
+    x, 0, 0, 0
+    0, y, 0, 0
+    0, 0, z, 0
+    0, 0, 0, 1
+```
+
+}
+
+| Library  | Function               |
+| -------- | ---------------------- |
+| SDL2/GLM | `glm::scale(vec3 pos)` |
+| OGL 3    | `glScaled(x, y, z)`    |
+
+rotation_x = {
+
+```text
+    1,      0,       0, 0
+    0, cos(x), -sin(x), 0
+    0, sin(x), cos(y), 0
+    0,       0,      0, 1
+```
+
+}
+
+rotation_y = {
+
+```text
+    cos(a),  0,  sin(a), 0
+    0,       1,       0, 0
+    -sin(a), 0,  cos(a), 0
+    0,       0,       0, 1
+```
+
+}
+
+rotation_z = {
+
+```text
+    cos(a), -sin(a), 0, 0
+    sin(a),  cos(a), 0, 0
+         0,       0, 1, 0
+         0,       0, 0, 1
+```
+
+}
+
+| Library  | Function                          |
+| -------- | --------------------------------- |
+| SDL2/GLM | `glm::rotate(angle, vec3 offset)` |
+| OGL 3    | `glRotated(angle, x, y, z)`       |
+
+### Quaternion representation
+
+
+
 [Back](./)
