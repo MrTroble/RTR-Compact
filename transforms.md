@@ -49,7 +49,7 @@ rotation_x = {
 ```text
     1,      0,       0, 0
     0, cos(x), -sin(x), 0
-    0, sin(x), cos(y), 0
+    0, sin(x),  cos(y), 0
     0,       0,      0, 1
 ```
 
